@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "aquarium",
+    "slug": "aquarium",
+    "version": "1.0.0",
+    "description": "Just a simple aquarium. Nothing extra",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1886f3"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1886f3"
+      },
+      "package": "com.aquarium.aquarium",
+      "versionCode": 2
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ec88f5da-fcc3-44cb-a0f7-92de91b104fc"
+      }
+    },
+    "owner": "aquarium"
+  }
+}
