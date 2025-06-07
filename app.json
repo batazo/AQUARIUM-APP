@@ -22,8 +22,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#1886f3"
       },
-      "package": "com.aquarium.simpleaquarium",
-      "usesCleartextTraffic": true
+      "package": "com.aquarium.simpleaquarium"
     },
     "extra": {
       "eas": {
@@ -36,6 +35,7 @@
     },
     "updates": {
       "url": "https://u.expo.dev/ec88f5da-fcc3-44cb-a0f7-92de91b104fc"
-    }
+    },
+    "plugins": ["expo-build-properties"]
   }
 }
