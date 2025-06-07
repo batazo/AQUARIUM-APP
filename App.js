@@ -7,7 +7,7 @@ import {
   Platform,
 } from "react-native";
 import { useAssets } from "expo-asset";
-import Constants from "expo-constants";
+//import Constants from "expo-constants";
 import { readAsStringAsync } from "expo-file-system";
 import { WebView } from "react-native-webview";
 import { StatusBar } from "expo-status-bar";
@@ -15,8 +15,6 @@ import * as SystemUI from "expo-system-ui";
 import * as NavigationBar from "expo-navigation-bar";
 import { useKeepAwake } from "expo-keep-awake";
 import appStyles from "./styles/app.style";
-const { height } = Dimensions.get("window");
-const totalHeight = Constants.statusBarHeight + height;
 
 const App = () => {
   useKeepAwake();
@@ -52,7 +50,7 @@ const App = () => {
     <ImageBackground
       source={require("./assets/aq_bg.jpg")}
       style={appStyles.imageBg}
-      imageStyle={{ height: totalHeight, width: "250%" }}
+      imageStyle={{ marginTop: 11, height: "99%", width: "310%" }}
       resizeMode="stretch"
     >
       <WebView
@@ -62,7 +60,7 @@ const App = () => {
         allowFileAccess={true}
         style={appStyles.webview}
       />
-      <StatusBar style="light" />
+      <StatusBar style="inverted" />
     </ImageBackground>
   );
 };

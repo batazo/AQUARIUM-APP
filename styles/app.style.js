@@ -15,7 +15,8 @@ const styles = StyleSheet.create({
   },
   imageBg: {
     flex: 1,
-    backgroundColor: "yellow",
+    backgroundColor: "black",
+    //backgroundColor: "yellow",
   },
   webview: {
     flex: 1,
