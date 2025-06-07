@@ -19,7 +19,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/adaptive_icon.png",
         "backgroundColor": "#1886f3"
       },
       "package": "com.aquarium.simpleaquarium"
@@ -46,6 +46,12 @@
             "buildToolsVersion": "35.0.0",
             "usesCleartextTraffic": true
           }
+        }
+      ],
+      [
+        "expo-asset",
+        {
+          "assets": ["assets/index.html"]
         }
       ]
     ]
