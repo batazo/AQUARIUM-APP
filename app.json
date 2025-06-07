@@ -22,7 +22,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#1886f3"
       },
-      "package": "com.aquarium.simpleaquarium"
+      "package": "com.aquarium.simpleaquarium",
+      "usesCleartextTraffic": true
     },
     "extra": {
       "eas": {
