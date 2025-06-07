@@ -4,22 +4,22 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "doctor": "npx expo-doctor"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.0",
-    "expo": "~50.0.7",
-    "expo-dev-client": "~3.3.8",
-    "expo-keep-awake": "^12.8.2",
-    "expo-status-bar": "^1.11.1",
-    "expo-updates": "~0.24.11",
-    "react": "18.2.0",
-    "react-native": "0.73.4",
-    "react-native-paper": "4.9.2",
-    "react-native-webview": "13.6.4"
+    "expo": "~53.0.10",
+    "expo-dev-client": "~5.2.0",
+    "expo-keep-awake": "^14.1.4",
+    "expo-status-bar": "^2.2.3",
+    "expo-updates": "~0.28.14",
+    "react": "19.0.0",
+    "react-native": "0.79.3",
+    "react-native-webview": "13.13.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.27.4"
   },
   "private": true
 }
