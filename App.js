@@ -26,7 +26,9 @@ const App = () => {
   useEffect(() => {
     SystemUI.setBackgroundColorAsync("black");
     if (Platform.OS === "android") {
-      NavigationBar.setBackgroundColorAsync("transparent");
+      NavigationBar.setBackgroundColorAsync("black");
+      NavigationBar.setVisibilityAsync("hidden");
+      NavigationBar.setBehaviorAsync("overlay-swipe");
     }
   }, []);
 
