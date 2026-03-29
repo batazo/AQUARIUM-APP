@@ -1,14 +1,7 @@
 import { useState, useEffect } from "react";
-import {
-  View,
-  ImageBackground,
-  Text,
-  Dimensions,
-  Platform,
-} from "react-native";
-import { useAssets } from "expo-asset";
-//import Constants from "expo-constants";
-import { readAsStringAsync } from "expo-file-system";
+import { View, ImageBackground, Text, Platform } from "react-native";
+import { Asset } from "expo-asset";
+import { File } from "expo-file-system";
 import { WebView } from "react-native-webview";
 import { StatusBar } from "expo-status-bar";
 import * as SystemUI from "expo-system-ui";
@@ -16,27 +9,24 @@ import * as NavigationBar from "expo-navigation-bar";
 import { useKeepAwake } from "expo-keep-awake";
 import appStyles from "./styles/app.style";
 
+async function loadHtmlAsset(requireRef) {
+  const [asset] = await Asset.loadAsync(requireRef);
+
+  const file = new File(asset.localUri);
+  return await file.text();
+}
+
 const App = () => {
   useKeepAwake();
-  const [index] = useAssets(require("./assets/index.html"));
   const [html, setHtml] = useState("");
 
   useEffect(() => {
     SystemUI.setBackgroundColorAsync("black");
     if (Platform.OS === "android") {
-      NavigationBar.setBackgroundColorAsync("black");
       NavigationBar.setVisibilityAsync("hidden");
-      NavigationBar.setBehaviorAsync("overlay-swipe");
     }
+    loadHtmlAsset(require("./assets/index.html")).then(setHtml);
   }, []);
-
-  useEffect(() => {
-    if (index) {
-      readAsStringAsync(index[0].localUri).then((data) => {
-        setHtml(data);
-      });
-    }
-  }, [index]);
 
   if (!html) {
     return (
